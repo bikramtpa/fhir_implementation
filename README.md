@@ -4,4 +4,5 @@ A FHIR implementation for angular js. Uses plain xml uploads to server to consum
 - Code Implementation
 - 
 Main code implemented on =>  assets/js/app.js
+
 All views are inside => views/

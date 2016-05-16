@@ -1,0 +1,112 @@
+<!-- SERVICES SECTION -->
+<div id="services" ng-controller="create-organization">
+    <div class="container" style="background-color:#fff;">
+        <legend>
+            <h1>Create Organization</h1>
+        </legend>
+
+					<div class="col-lg-3">					
+						<div class="col-md-12 column margintop20" style="padding-bottom:20px;">
+						  <ul class="nav nav-pills nav-stacked">
+							  <li><a href="./organization"><span class="fa fa-arrow-circle-right"></span> List History</a></li>
+							  <li class="active"><a href="#"><span class="fa fa-arrow-circle-right"></span> Add new Organization</a></li>
+							  <li><a href="/edit-organization" class="active2"><span class="fa fa-arrow-circle-right"></span> Update Organization Info</a></li>
+							  <li><a href="/delete-organization"><span class="fa fa-arrow-circle-right"></span> Delete Organization</a></li>
+						  </ul>
+						</div>
+					</div>		
+
+<div class="col-lg-9">	
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="identifier">Organization Identifier</label>
+                    <div class="col-md-4">
+                        <input id="identifier" name="identifier" placeholder="" class="form-control input-md" type="text" disabled="true" ng-model="identifier">
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="name">Name of Organization</label>
+                        <div class="col-md-4">
+                            <input id="name" name="name" placeholder="" class="form-control input-md" required="" type="text" ng-model="name">
+                            </div>
+                        </div>
+                        <!-- Multiple Radios (inline) -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="active">Active</label>
+                            <div class="col-md-4">
+                               <label class="radio-inline">
+				<input name="active" id="radio1" value="false" type="radio" ng-model="activated.active"> False
+				</label>
+				<label class="radio-inline">
+				  <input name="active" id="radio2" value="true" checked="" type="radio" ng-model="activated.active">True
+				</label>
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="orgntype">Type of Organization</label>
+                                    <div class="col-md-4">
+                                        <select id="orgntype" name="orgntype" class="form-control" ng-model="orgntype" required>
+                                            <option value="prov">Healthcare Provider</option>
+                                            <option value="dept">Hospital Department</option>
+                                            <option value="team">Organizational Team</option>
+                                            <option value="govt">Government</option>
+                                            <option value="ins">Insurance Company</option>
+                                            <option value="edu">Educational Institute</option>
+                                            <option value="reli">Religious Institute</option>
+                                            <option value="crs">Clinical Research Sponsor</option>
+                                            <option value="cg">Community Group</option>
+                                            <option value="bus">Non-Healthcare Business or Corporation</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="phone">Phone Number</label>
+                                    <div class="col-md-4">
+                                        <input id="phone" name="phone" placeholder="" class="form-control input-md" type="text" ng-model="phone">
+                                        </div>
+                                    </div>
+                                    <!-- Text input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="country">Country</label>
+                                        <div class="col-md-4">
+                                            <input id="country" name="country" placeholder="" class="form-control input-md" type="text" ng-model="country">
+                                            </div>
+                                        </div>
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="city">CIty</label>
+                                            <div class="col-md-4">
+                                                <input id="city" name="city" placeholder="" class="form-control input-md" type="text" ng-model="city">
+                                                </div>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label" for="postal">Street</label>
+                                                <div class="col-md-4">
+                                                    <input id="street" name="street" placeholder="" class="form-control input-md" type="text" ng-model="street">
+                                                    </div>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label" for="postal">Postal</label>
+                                                <div class="col-md-4">
+                                                    <input id="postal" name="postal" placeholder="" class="form-control input-md" type="text" ng-model="postal">
+                                                    </div>
+                                                </div>
+                                                <!-- Button -->
+                                                <div class="form-group">
+                                                    <label class="col-md-4 control-label" for="save"></label>
+                                                    <div class="col-md-4">
+                                                        <button id="save" name="save" class="btn btn-primary" ng-click="postrequest()">Create</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+</div>
+                                    </div>

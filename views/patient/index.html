@@ -1,0 +1,42 @@
+	<!-- SERVICES SECTION -->
+	<div id="services">
+		<div class="container" style="background-color:#fff;">
+			<div class="row mt">
+				<div class="col-lg-12" style="background-color:#fff;padding-top:5px;">
+					<h1>Patient Information</h1>
+					<hr>
+					<div class="col-lg-3">					
+						<div class="col-md-12 column margintop20" style="padding-bottom:20px;">
+						  <ul class="nav nav-pills nav-stacked">
+							  <li class="active"><a href="#"><span class="fa fa-arrow-circle-right"></span> List Server History</a></li>
+							  <li><a href="./add-patient"><span class="fa fa-arrow-circle-right"></span> Add new Patient</a></li>
+							  <li><a href="./edit-patient" class="active2"><span class="fa fa-arrow-circle-right"></span> Update Patient's Record</a></li>
+							  <li><a href="./delete-patient"><span class="fa fa-arrow-circle-right"></span> Delete patient's Record</a></li>
+						  </ul>
+						</div>
+					</div>					
+					<div class="col-lg-9" id="inside-page" ng-controller="listpatient">				
+						    <table datatable="ng" class="table">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Name</th>
+										<th>Phone</th>
+										<th>Gender</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="entry in entries" ng-click="testingClick(name)">
+										<td>{{entry.resource.id}}</td>
+										<td>{{entry.resource.name[0].given+ " " + entry.resource.name[0].family}}</td>
+										<td>{{entry.resource.telecom[0].value}}</td>
+										<td>{{entry.resource.gender}}</td>
+									  </tr>
+								</tbody>
+							</table>
+					</div>
+					
+			  </div><!-- col-lg-12 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- services section -->

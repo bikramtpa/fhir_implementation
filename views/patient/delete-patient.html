@@ -1,0 +1,43 @@
+	<!-- SERVICES SECTION -->
+	<div id="services" ng-controller="delete-patient">
+		<div class="container" style="background-color:#fff;">
+			<div class="row mt">
+				<div class="col-lg-12" style="background-color:#fff;padding-top:5px;">
+					<h1>Delete Patient Information</h1>
+					<hr>
+					<div class="col-lg-3">					
+						<div class="col-md-12 column margintop20" style="padding-bottom:20px;">
+						  <ul class="nav nav-pills nav-stacked">
+							  <li><a href="./patient"><span class="fa fa-arrow-circle-right"></span> List Server History</a></li>
+							  <li><a href="./add-patient"><span class="fa fa-arrow-circle-right"></span> Add new Patient</a></li>
+							  <li><a href="./edit-patient"><span class="fa fa-arrow-circle-right"></span> Update Patient's Record</a></li>
+							  <li class="active"><a href="#"><span class="fa fa-arrow-circle-right"></span> Delete patient's Record</a></li>
+						  </ul>
+						</div>
+					</div>					
+					
+
+	<div class="col-lg-9">	
+		<form class="form-horizontal">
+
+		        <!-- Text input-->
+		        <div class="form-group">
+		            <label class="col-md-4 control-label" for="identifier">Enter Patient Id</label>
+		            <div class="col-md-4">
+		                <input id="identifier" name="identifier" placeholder="" class="form-control input-md" type="text" ng-model="deleteIdentifier">
+		                </div>
+		            </div>
+		        <!-- Button -->
+		        <div class="form-group">
+		            <label class="col-md-4 control-label" for="save"></label>
+		            <div class="col-md-4">
+		            <button id="save" name="save" class="btn btn-primary" ng-click="deletePatient()">Delete Patient</button>
+		            </div>
+		        </div>
+		</form>
+	<hr>
+	</div>
+	
+	<div class="col-lg-9">	
+	</div>
+	</div>

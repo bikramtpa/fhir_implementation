@@ -1,0 +1,45 @@
+<!-- SERVICES SECTION -->
+<div id="services" ng-controller="delete-organization">
+    <div class="container" style="background-color:#fff;">
+        <legend>
+            <h1>Delete Organization</h1>
+        </legend>
+
+
+					<div class="col-lg-3">					
+						<div class="col-md-12 column margintop20" style="padding-bottom:20px;">
+						  <ul class="nav nav-pills nav-stacked">
+							  <li><a href="./organization"><span class="fa fa-arrow-circle-right"></span> List History</a></li>
+							  <li class=""><a href="./create-organization"><span class="fa fa-arrow-circle-right"></span> Add new Organization</a></li>
+							  <li><a href="./edit-organization"><span class="fa fa-arrow-circle-right"></span> Update Organization Info</a></li>
+							  <li class="active"><a href=""><span class="fa fa-arrow-circle-right"></span> Delete Organization</a></li>
+						  </ul>
+						</div>
+					</div>	
+
+<div class="col-lg-9">	
+        <form class="form-horizontal">
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="identifier">Enter Organization Id</label>
+                    <div class="col-md-4">
+                        <input id="identifier" name="identifier" placeholder="" class="form-control input-md" type="text" ng-model="deleteIdentifier">
+                        </div>
+                    </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="save"></label>
+                    <div class="col-md-4">
+                    <button id="save" name="save" class="btn btn-primary" ng-click="deleteOrganization()">Delete Organization</button>
+                    </div>
+                </div>
+	</form>
+<hr>
+</div>
+	
+
+<div class="col-lg-9">	
+</div>
+
+</div>

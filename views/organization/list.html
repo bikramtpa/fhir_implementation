@@ -1,0 +1,42 @@
+	<!-- SERVICES SECTION -->
+	<div id="services" ng-controller="organization">
+		<div class="container" style="background-color:#fff;">
+			<div class="row mt">
+				<div class="col-lg-12" style="background-color:#fff;padding-top:5px;">
+					<h1>Server History</h1>
+					<hr>
+					<div class="col-lg-3">					
+						<div class="col-md-12 column margintop20" style="padding-bottom:20px;">
+						  <ul class="nav nav-pills nav-stacked">
+							  <li class="active"><a href=""><span class="fa fa-arrow-circle-right"></span> List History</a></li>
+							  <li><a href="./create-organization"><span class="fa fa-arrow-circle-right"></span> Add new Organization</a></li>
+							  <li><a href="./edit-organization" class="active2"><span class="fa fa-arrow-circle-right"></span> Update Organization Info</a></li>
+							  <li><a href="./delete-organization"><span class="fa fa-arrow-circle-right"></span> Delete Organization</a></li>
+						  </ul>
+						</div>
+					</div>					
+					<div class="col-lg-9" id="inside-page" ng-controller="listpatient">				
+						    <table datatable="ng" class="table">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Name</th>
+										<th>Phone</th>
+										<th>City</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="entry in organizations" ng-click="testingClick(name)">
+										<td>{{entry.resource.id}}></td>
+										<td>{{entry.resource.name}}</td>
+										<td>{{entry.resource.telecom[0].value}}</td>
+										<td>{{entry.resource.address[0].city}}</td>
+									  </tr>
+								</tbody>
+							</table>
+					</div>
+					
+			  </div><!-- col-lg-12 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- services section -->

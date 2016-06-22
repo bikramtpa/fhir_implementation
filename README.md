@@ -6,3 +6,9 @@ A FHIR implementation for angular js. Uses plain xml uploads to server to consum
 Main code implemented on =>  assets/js/app.js
 
 All views are inside => views/
+
+-Code dependency
+=> No such Dependency except third party pubic FHIR Server.
+
+- Demo Link
+- => http://his-tolet.rhcloud.com
